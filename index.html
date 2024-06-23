@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Toritseju Moju - UI/UX Designer </title>
-    <link rel="icon" href="img/logo.png" type="image/png" />
-
-    <!-- Font Awesome -->
-<link
+    <title>TM Portfolio - Web Developer & Data Analyst </title>
+    <link
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
   rel="stylesheet"
 />
-<link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet">
-                
+<link href="https://fonts.cdnfonts.com/css/druk-wide-bold" rel="stylesheet">
 <!-- MDB -->
 <link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
   rel="stylesheet"
 />
-<link rel="icon" href="img/logo.png" type="image/png" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
- 
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-
-  <!-- Add this in the <head> section -->
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/glide.min.js"></script>
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
 
 <style>
-   
+    @import url('https://fonts.cdnfonts.com/css/druk-wide-bold');
+        *{
+          font-family: 'Druk Wide Bold', sans-serif;
+                                                    
+        }
 
-    body{
-        font-family: 'Product Sans', sans-serif;
-       
-    }
+        body{
+            background-color: #182B27;
+        }
 
-    .navbar {
+        .navbar {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            font-size: 13px;
+        }
+
+        .navbar {
     --mdb-navbar-box-shadow: none
     --mdb-navbar-padding-top: 0.5625rem;
     --mdb-navbar-brand-img-margin-right: none;
@@ -47,19 +44,10 @@ href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.
 }
 
 
-.nav-link.active {
-    color: #EE364D;
-  font-weight: bold;
-  background-image: url("img/underline.svg");
-  background-position: bottom left ;
- 
-  background-repeat: no-repeat;
-}
-
 
 .navbar-nav > li{
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:50px;
+    padding-right:50px;
   }
 
   .navbar-nav > li{
@@ -67,724 +55,461 @@ href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.
     margin-right:20px;
   }
 
-
-/* If the screen size is 1200px wide or more, set the font-size to 80px */
-@media (min-width: 1200px) {
-  .responsive-font-example {
-    font-size: 56px;
-  }
-}
-/* If the screen size is smaller than 1200px, set the font-size to 80px */
-@media (max-width: 1199.98px) {
-  .responsive-font-example {
-    font-size: 30px;
-  }
+/* CSS for image zoom effect */
+.image-link {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 30px;
 }
 
-
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background-color: black;
-    color:black;
-    border-radius: 0px 12px 12px 0px;
-    border-bottom: 3px solid #EE364D;
+.zoomable {
+    transition: transform 0.3s ease;
+    transform: scale(1); /* Normal state */
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
-   
-    border-radius:12px;
-}
-
-
- /* Default font size for larger screens */
- .responsive-heading h1 {
-        font-size: 70px;
-        letter-spacing: -2px;
-        color: black;
-        line-height: 90px;
-    }
-
-    @media (max-width: 575.98px) {
-        .responsive-heading h1 {
-            font-size: 40px;
-            line-height: 50px;
-        }
-    }
-
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        .responsive-heading h1 {
-            font-size: 40px;
-            line-height: 50px;
-        }
-    }
-
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        .responsive-heading h1 {
-            font-size: 60px;
-            line-height: 70px;
-        }
-    }
-
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-        .responsive-heading h1 {
-            font-size: 70px;
-            line-height: 80px;
-        }
-    }
-
-      /* Add a transition for smooth sliding */
-      .section-slide-in,
-        .section-slide-out {
-            transition: transform 0.5s ease-in-out;
-        }
-
-        /* Define the initial position for sections */
-        .section-slide-in {
-            transform: translateY(0%);
-        }
-
-        /* Define the final position for sections */
-        .section-slide-out {
-            transform: translateY(-100%);
-        }
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color:#45145E;
-  border-radius:60px;
-  cursor: pointer;
-  padding: 15px;
-  color:white;
-  border-radius: 15px;
-}
-
-#myBtn:hover {
-  background-color: #555;
-}
-
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    background-color: black;
-    color:black;
-    border-radius: 0px 12px 12px 0px;
-    border-bottom: 3px solid #EE364D;
-}
-
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover {
-   
-    border-radius:12px;
-    border-bottom:3px solid #9901CC;
+.zoomable:hover {
+    transform: scale(1.1); /* Zoomed state */
 }
 
   
 
-</style>
-
-
+        </style>
 </head>
-
-
 <body>
 
-
-
-
-  <nav class="navbar navbar-expand-lg navbar-light ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"> <img src="img/logo.svg" class="img-fluid" width="140px"> </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            style="background-color:orange; border: 2px solid black; "
-          >
-            <i class="fas fa-bars" style="color:black;"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-               
     
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-topbar">
+    <div class="container">
+      <a class="navbar-brand btn btn-sm" href="#" style="border-radius:20px; background-color:white; color:black;">
+     TSM
+      </a>
+      <button
+        data-mdb-collapse-init
+        class="navbar-toggler"
+        type="button"
+        data-mdb-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="background-color:white;"
+      >
+        <i class="fas fa-bars" ></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+         
+           
+          <li class="nav-item">
+            <a class="nav-link" href="#about"  style="color:white;"  >About </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="#works" style="color:white;"   > Works </a>
+          </li>
+
+       
+          <li class="nav-item">
+            <a class="nav-link" href="#contact"  style="color:white;"  >Contact</a>
+          </li>
+
+  
+        </ul>
+
+
+        <ul class="navbar-nav mr-auto">
+         
+           
+          <li class="nav-item btn btn-sm" style="background-color:#BEE988; color:black; border-radius:20px;">
+            <a class="nav-link" href="#footer"  style="color: #182B27; "  >HIRE ME</a>
+          </li>
+           
             </ul>
 
-            <form class="d-flex input-group w-auto">
-
-                <ul class="navbar-nav w-300 ">
-    
-                    <li class="nav-item" style="color:black; font-size: 18px;">
-                        <a class="nav-link" href="index.html" style="color:black; ">Home</a>
-                      </li>
-                      <li class="nav-item" style="color:black; font-size: 18px;">
-                        <a class="nav-link" href="#about" style="color:black; ">About </a>
-                      </li>
-                    
-                      <li class="nav-item" style="color:black; font-size: 18px;">
-                        <a class="nav-link" href="#works" style="color:black; "> Projects </a>
-                      </li>
-        
-                      <li class="nav-item" style="color:black; font-size: 18px;">
-                        <a class="nav-link" href="#contact" style="color:black; ">Contact</a>
-                      </li>
-
-
-                  <li class="nav-item " style="color:white;">
-                    <a target="_blank" class="nav-link btn btn btn-lg" href=" https://drive.google.com/file/d/1lU-t30dMzQ_ky9bSq5aHu_cjVcM_2OnJ/view?usp=sharing " rel="nofollow" style="font-weight:bold; width: 200px;
-                    max-width: auto;   border:2px solid black; padding: 13px; font-size: 15px; background-color:#9901CC; color:white; text-transform: none;  font-weight:bold; border-radius:10px;">
-                    Download CV
-                    </a>
-                  </li>
-    
-                </ul>
-    
-    </form>
-           
-          </div>
-        </div>
-      </nav>
-      
-
-
-<div style="margin-bottom: 20px;"></div>
-
-
-<div class="container" >
-
-    
- <div  class="responsive-heading" data-aos="fade-left" >
-
-     
-     <div class = "row">
-
-         <div class="col-md-6 mb-3">
-<p> Hello, My Name Is </p>
-             <h1 style="font-weight:800; "> Toritseju Samson Moju </h1>
-             <h3> I am a UI/UX Designer and Web Designer</h3>
-             <p style="font-size:18px;"> With 9 years of experience in Graphic Design, UI/UX, and Web Development Explore my journey across diverse industries, from gaming to fintech and edtech. Beyond design, I am a UI-to-Code specialist, ensuring seamless implementation of user interfaces into robust and functional web solutions. Let's embark on a visual journey through my portfolio! </p>
-         </div>
-
-
-         <div class="col-md-6 mb-3">
-<img src="img/picc.png" class="img-fluid">
-         </div>
-
-     </div>
-     
-    
-
-
-
-</div>
-
-</div>
-<div class="container-fluid" style="background: #2f1db5; padding:25px; " id="about">
-
-    
-            
-
-
-    <div class="container aos-init aos-animate" data-aos="fade-up" >
-    
-    <div style="margin-bottom: 80px;"></div>
-
-
-    <p style="font-size: 50px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -3px; color:white;"> ABOUT ME </p>
-
-<br>
-
-    
-<p style="color:white; font-size:18px;"> 
-    Greetings! I'm Toritseju Samson Moju, a professional passionate individual who enjoys bringing design to life through web programming. With a B.Sc. in Computer Science and an M.Sc. in Data Analysis for Business Intelligence, I've honed a unique skill set that seamlessly merges design and development.</p>
+      </div>
+    </div>
+  </nav>
   
 
-    <p style="color:white; font-size:18px;">
-        I've had the privilege of contributing my skills to a diverse range of projects. As a UI/UX designer and web programmer, I've designed interfaces for mobile games that captivate users and ensure an immersive gaming experience. Additionally, I've played a key role in developing HR management systems, fintech applications, and learning management systems, enhancing user engagement and overall satisfaction.
+    <div style="margin-top:90px"></div>
+<div class="container"  data-aos="fade-down">
+    <h1 style="color:orangered;"> Hello,</h1>
+    <h2 style="color:white;"> 
+        My name is Toritseju Samson Moju .  <br> I'm a 
+      <strong style="color:orangered;"> Data Analyst,  Software Web Developer, </strong>  
+      based in  Leicester, United Kingdom (UK)
+    </h2>
 
-        My flexible approach to problem-solving and my commitment to staying at the forefront of industry trends make me a valuable asset to any team. I relish the opportunity to collaborate with developers to ensure that designs are not only visually stunning but also function seamlessly.
-    
+    <br>
+
+    <a class="btn btn-lg" href="#contactus"  style="color: #182B27; background-color:#BEE988; border-radius:20px; "  > Let's Work Together</a>
+
+</div>
+
+
+<div style="margin-top:40px"></div>
+
+
+<div class="container"  data-aos="fade-down">
+
+    <img src="img/pic.png" class="img-fluid" style="border-radius:20px;">
+
+</div>
+
+
+<div style="margin-top:80px"></div>
+
+    <div class="container" id="about">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3"  data-aos="fade-left">
+
+                <h1 style="color:#BEE988;"> About Me </h1>
+                <a class="btn btn-lg" href="#contactus"  style="color: #182B27; background-color:#BEE988; border-radius:20px; "  > Let's Work Together</a>
+
+            </div>
+
+            <div class="col-md-8 mb-3"  data-aos="fade-right">
+
+               <p style="color:white; text-align:justify;">
+                With over 9 years of experience, I specialize in turning complex ideas into clean and intuitive experiences. My expertise spans <strong style="color:orangered;"> Data Analysis, UI/UX Design, Web and Front-End Development, and Graphic Design. </strong> I deliver actionable insights, engaging interfaces, responsive websites, and compelling visuals, combining technical skill and creative vision to drive business success and enhance user satisfaction.
+                With a bachelor's degree in Computer Science and a Master's Degree in Data Analytics for Business Intelligence at the University of Leicester, UK.</p>
+            </div>
+
+
+            <hr style="color:white; background-color:white;">
+
+     
+        </div>
+
+    </div>
+
+
+<div style="margin-top:50px"></div>
+<div class="container"  data-aos="fade-right">
+
+    <h1 style="color:#BEE988;"> What I Do </h1>
+
+    <p style="color:white; font-size:20px;">
+        
+My expertise spans <strong style="color:orangered;"> Data Analysis, UI/UX Design, Web and Front-End Development,
+and Graphic Design.  </strong>  Using a blend of analytical prowess and creative acumen, 
+
+I deliver solutions that enhance user engagement and drive business success.
     </p>
 
+    <div class="row"  data-aos="fade-left">
+        <div class="col-md-4 mb-3">
 
-    <p style="color:white; font-size:18px;">
-        Proficient in Adobe Creative Cloud, Figma, Sketch, InVision, PHP, and MySQL, I ensure visually stunning designs and dynamic functionality. My flexible approach, industry awareness, and commitment to seamless execution make me an asset to any team. </p>
-    
-        <p style="color:white; font-size:18px;">
-Outside the space of work, I enjoy playing video games, watching movies and learning various relaxation techniques online such as ASMR and Meditation to enhance my productivity and I watch animes and animations as well. </p>
-</div>
-      
-    
-    <br><br><br>
-    </div>
+            <div class="card-outline" style="border:4px solid #BEE988; padding:18px; border-radius:18px;">
+<h5 style="color:#BEE988;"> Data Analyst </h5>
 
+<div style="margin-top:40px"></div>
 
-    <div style="margin-bottom: 80px;"></div>
+<p style="font-size:13px; color:white;"> I specialize in data analysis, 
+    transforming complex data into 
+    clear, actionable insights. Utilizing 
+    cutting-edge tools like Python, MS Excel, PowerBI, Tableau, I help businesses 
+    make informed decisions through 
+    meticulous data exploration and 
+    trend analysis.</p>
+            </div>
 
-
-    <div class="container" >
-
-
-<div class="row" data-aos="fade-up" id="works">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">   SIV Gaming ChopBig </h1>
         </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-gamepad"></i> MOBILE GAMING APPLICATION </h4>
-    </div>
 
 
-    <div class="col-md-6 mb-3">
-        <h5> ChopBig is a mobile gaming platform that connects its users through games like Whot, Dice and other fun board games. It affords gamers the opportunity to win big by challenging friends and thousands of others on the app. It also has an exciting coin version (free) where you can play against others to win coins. Choppers (what users of the app are called) can form social communities for friends, family and other game lovers to enjoy gaming to the max.
-        </h5>
-<br>
-        <a href="https://play.google.com/store/apps/details?id=com.dandan.chop&hl=en_GB&gl=US " target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
+        <div class="col-md-4 mb-3">
 
+            <div class="card-outline" style="border:4px solid #BEE988; padding:18px; border-radius:18px; height:100%;">
+<h5 style="color:#BEE988;"> Website Design </h5>
 
+<div style="margin-top:20px"></div>
 
-    </div>
-</div>
+<p style="font-size:13px; color:white;"> Aesthetically impressive website 
+    layouts that engage your viewers 
+    by harmonizing your brand identity 
+    and client preferences.
 
+This includes programming front-end and backend logics such as Material UI, Bootrstrap, Javascript, PHP and MySQL for client who prefer custom built website.</p>
+            </div>
 
-
-<center>
-
-    <img src="img/uidesign/chopbig.svg" class="img-fluid" data-aos="fade-up" >
-</center>
-
-
-
-<hr>
-
+        </div>
 
 
         
-<div class="row" data-aos="fade-up" id="works">
-    <div class="col mb-4">
+        <div class="col-md-4 mb-3">
 
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">   Artiste Guess?  </h1>
+            <div class="card-outline" style="border:4px solid #BEE988; padding:18px; border-radius:18px; height:100%;">
+<h5 style="color:#BEE988;"> UX/UI Design </h5>
+
+<div style="margin-top:80px"></div>
+
+<p style="font-size:13px; color:white;"> 
+    My process involves empathetic
+    user research, interactive prototyping,
+    and usability testing to ensure a 
+    seamless and aesthetically pleasing 
+    user experience. </p>
+            </div>
+
         </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-gamepad"></i> MOBILE GAMING APPLICATION </h4>
-    </div>
-
-
-    <div class="col-md-6 mb-3">
-        <h5> Artiste Guess" is a music-based mobile and desktop game that tests players' knowledge of artists and their music. It offers multiple game play modes to keep players engaged and entertained.
-        </h5>
-<br>
-        <a href="https://www.behance.net/gallery/181948599/ARTISTE-GUESS-MOBILE-GAME-UI-DESIGN " target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
 
 
     </div>
-</div>
+    <hr style="color:white; background-color:white;">
+    </div>
 
+    <div style="margin-top:80px"></div>
 
+    <div class="container" id="works">
 
-<center>
+      
+      <div class="row">
 
-    <img src="img/uidesign/artisteguess.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;" >
-</center>
+        <div class="col-md-4 mb-3">
 
-
-
-<hr>
-
-<div style="margin-bottom: 80px;"></div>
-
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">   KRACADA </h1>
+<div class="stickytext"  style="position: sticky; top: 50px; z-index: 10;">
+          <h1 style="color:white;">  SELECTED WEBSITE WORKS </h1>
+          <h4 style="color:rgb(255, 217, 0);"> 2019 - 2024 </h4>
         </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-laptop"></i> ALL-IN-ONE ENTERTAINMENT PLATFORM </h4>
-    </div>
 
-
-    <div class="col-md-6 mb-3">
-        <h5> An All-In-One platform that connects people with entertainment, news, lifestyle, fashion, jobs and lots more.
-        </h5>
-<br>
-        <a href="https://www.figma.com/community/file/1253148547161855768" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
-
-
-    </div>
-</div>
-
-
-
-<center>
- 
-    <img src="img/uidesign/kracada.jpg" class="img-fluid" data-aos="fade-up"  width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-<br>
-
-<hr>
-
-<br><br>
-
-<div class="row" data-aos="fade-up"> 
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">   KRIS  </h1>
         </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-laptop"></i> HR MANAGEMENT PLATFORM </h4>
-    </div>
 
 
-    <div class="col-md-6 mb-3">
-        <h5> KRIS is a complete enterprise human resources management system solutions that houses all HR services from recruiting, shortlisting, job boards and lots more.
-        </h5>
-<br>
-        <a href="https://www.figma.com/community/file/1253149693507675930" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
+        <div class="col-md-8 mb-3">
+
+          <a href="https://mojutoju.github.io/swiftsend" class="image-link" target="_blank">
+            <img src="webmockups/swiftsend.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+            <br> <br>
+             <h3 style="color:WHITE;"> Swift Send </h3>
+             <p style="color:WHITE;"> Logistics Company </p>
+
+             <div style="margin-top:80px"></div>
+  
+          <a href="https://github.com/mojutoju/noronmarque" class="image-link" target="_blank">
+          <img src="webmockups/nm2.jpg" class="img-fluid zoomable" style="border-radius:30px;"> </a>
+         <br> <br>
+          <h3 style="color:WHITE;"> Noron Marque </h3>
+          <p style="color:WHITE;"> A Business Consulting Solution </p>
+
+
+    
+         
+           <div style="margin-top:80px"></div>
+
+           <a href="https://safeears.github.io/" class="image-link" target="_blank">
+           <img src="webmockups/safeears.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+           <br> <br>
+            <h3 style="color:WHITE;"> Safe Ears </h3>
+            <p style="color:WHITE;"> Non-Profit Organisation </p>
 
 
 
-    </div>
-</div>
+            <div style="margin-top:80px"></div>
+
+           <a href="https://mojutoju.github.io/transitionextreme" class="image-link" target="_blank">
+           <img src="webmockups/transitionextreme.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+           <br> <br>
+            <h3 style="color:WHITE;"> Transition Extreme </h3>
+            <p style="color:WHITE;"> Non-Profit Sports Organisation </p>
+
+
+            <div style="margin-top:80px"></div>
+
+           <a href="https://mojutoju.github.io/demonslayer" class="image-link" target="_blank">
+           <img src="webmockups/demonslayer.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+           <br> <br>
+            <h3 style="color:WHITE;"> Demon Slayer </h3>
+            <p style="color:WHITE;"> Anime Entertainment Company </p>
+
+
+            <div style="margin-top:80px"></div>
+
+            <a href="https://github.com/mojutoju/sleekmek.com" class="image-link" target="_blank">
+            <img src="webmockups/sleekmek.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+            <br> <br>
+             <h3 style="color:WHITE;"> SleekMek </h3>
+             <p style="color:WHITE;"> Construction Company </p>
+
+             
+            <div style="margin-top:80px"></div>
+
+            <a href="https://orthodonticdental.ng/" class="image-link" target="_blank">
+              <img src="webmockups/orthodonticdental.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+              <br> <br>
+               <h3 style="color:WHITE;"> Orthodontic Dental Enterprise </h3>
+               <p style="color:WHITE;"> E-Commerce Company </p>
+
+
+                
+            <div style="margin-top:80px"></div>
+
+            <a href="https://projectsmileng.org" class="image-link" target="_blank">
+              <img src="webmockups/projectsmile.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+              <br> <br>
+               <h3 style="color:WHITE;"> Project Smile </h3>
+               <p style="color:WHITE;"> CSR Non-Profit Organisation </p>
 
 
 
 
-<center>
 
-    <img src="img/uidesign/kris.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-
-<br>
-<hr>
-
-<br><br>
-
-
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">  HIREME  </h1>
         </div>
+
+      </div>
+
+
+    </div>
+
+    
+
+    <hr style="color:white; background-color:white;">
+  </div>
+
+  <div style="margin-top:80px"></div>
+
+  <div class="container" >
+
+    
+    <div class="row">
+
+     
+      <div class="col-md-4 mb-3">
+
+        <div class="stickytext"  style="position: sticky; top: 50px; z-index: 10;">
+                <h1 style="color:white;">  SELECTED UI/UX DESIGN WORKS </h1>
+                <h4 style="color:rgb(255, 217, 0);"> 2015 - 2024 </h4>
+              </div>
+        
+              </div>
+
+
+      <div class="col-md-8 mb-3">
+
+        <a href="https://www.behance.net/gallery/181948599/ARTISTE-GUESS-MOBILE-GAME-UI-DESIGN" class="image-link" target="_blank">
+          <img src="https://toritsejumoju.github.io/img/uidesign/artisteguess.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+          <br> <br>
+           <h3 style="color:WHITE;"> Artiste Guess? </h3>
+           <p style="color:WHITE;"> Mobile Gaming Company </p>
+
+           <div style="margin-top:30px"></div>
+        <a href="https://www.figma.com/community/file/1253148547161855768" class="image-link" target="_blank">
+        <img src="https://toritsejumoju.github.io/img/uidesign/kracada.jpg" class="img-fluid zoomable" style="border-radius:30px;"> </a>
+       <br> <br>
+        <h3 style="color:WHITE;"> Kracada  </h3>
+        <p style="color:WHITE;"> All-In-One Entertainment Website </p>
+
+
+  
        
-        <h4 style="color:black;"> <i class="fa fa-laptop"></i> HR AND RECRUITMENT PLATFORM </h4>
-    </div>
+        <div style="margin-top:30px"></div>
 
-
-    <div class="col-md-6 mb-3">
-        <h5>An all-in-one recruiting and hiring solution that helps connect young professionals to internships and early career opportunities.
-        </h5>
-<br>
-        <a href="https://www.figma.com/community/file/1265362782368922021" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
-
-
-    </div>
-</div>
+         <a href="https://www.figma.com/community/file/1265362782368922021" class="image-link" target="_blank">
+         <img src="https://toritsejumoju.github.io/img/uidesign/hireme.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+         <br> <br>
+          <h3 style="color:WHITE;"> Hire Me </h3>
+          <p style="color:WHITE;"> HR and Recruitment Solutions </p>
 
 
 
+          <div style="margin-top:30px"></div>
+         <a href="https://www.figma.com/community/file/1265335657668402550" class="image-link" target="_blank">
+         <img src="https://toritsejumoju.github.io/img/uidesign/kracademydisplay.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+         <br> <br>
+          <h3 style="color:WHITE;"> Kracademy </h3>
+          <p style="color:WHITE;"> Learning Management System </p>
 
-<center>
+          <div style="margin-top:30px"></div>
 
-    <img src="img/uidesign/hireme.jpg" class="img-fluid"  data-aos="fade-up"  width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-
-
-
-<br>
-
-<hr>
-
-<br><br>
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">   KRACADEMY  </h1>
-        </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-laptop"></i> LEARNING MANAGEMENT PLATFORM </h4>
-    </div>
+         <a href="https://www.figma.com/file/orVRu4zbnhNUADFuhuPKvj/CREDBANK?node-id=0%3A1&t=GpnuVSuNi1VuvBKL-1" class="image-link" target="_blank">
+         <img src="https://toritsejumoju.github.io/img/uidesign/credbank.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+         <br> <br>
+          <h3 style="color:WHITE;"> CredBank </h3>
+          <p style="color:WHITE;"> Fintech Mobile Solution</p>
 
 
-    <div class="col-md-6 mb-3">
-        <h5> An Online Learning Management Platform to kick start your career path for fresh graduates and entry level candidates.
-        </h5>
-<br>
-        <a href="https://www.figma.com/community/file/1265335657668402550" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
+          <div style="margin-top:30px"></div>
+
+          <a href="https://www.figma.com/file/DiJZzhPsASugTqoROvQTfp/Yolk-Count?t=VC2M790tsZ2efUOo-6" class="image-link" target="_blank">
+          <img src="https://toritsejumoju.github.io/img/uidesign/22.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+          <br> <br>
+           <h3 style="color:WHITE;"> Yolk Count </h3>
+           <p style="color:WHITE;"> Egg Timer Mobile Application </p>
+
+           
+          <div style="margin-top:50px"></div>
+
+          <a href="https://www.figma.com/file/pVQQBfIBVkiFtqcKfDoDQ5/BetaWaka?node-id=0%3A1" class="image-link" target="_blank">
+            <img src="https://toritsejumoju.github.io/img/uidesign/1.jpg" class="img-fluid zoomable" style="border-radius:30px;">  </a>
+            <br> <br>
+             <h3 style="color:WHITE;"> Betawaka </h3>
+             <p style="color:WHITE;"> Travel Alarm Mobile Application </p>
 
 
-
-    </div>
-</div>
+        
 
 
-
-
-<center>
-
-    <img src="img/uidesign/kracademydisplay.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-
-
-
-
-<br>
-
-<hr>
-
-<br><br>
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">   CredBank </h1>
-        </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-mobile"></i> FINTECH MOBILE PLATFORM  </h4>
-    </div>
-
-
-    <div class="col-md-6 mb-3">
-        <h5> CredBank is a fintech mobile application that provides local and international transactions made easy for individuals in different countries of the world.
-
-
-        </h5>
-<br>
-        <a href="https://www.figma.com/file/orVRu4zbnhNUADFuhuPKvj/CREDBANK?node-id=0%3A1&t=GpnuVSuNi1VuvBKL-1" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
+      </div>
 
 
 
     </div>
-</div>
 
+    <hr style="color:white; background-color:white;">
+  </div>
 
+        
+  <div style="margin-top:50px"></div>
 
 
-<center>
+  <div class="container">
+<div class="row">
+  
+  <div class="col-md-6 mb-3">
 
-    <img src="img/uidesign/credbank.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
+    <div class="stickytext"  style="position: sticky; top: 50px; z-index: 10;">
+      <h1 style="color:white;"> RECENT DATA ANALYST PROJECTS </h1>
+      <h4 style="color:rgb(255, 217, 0);"> 2023 - 2024 </h4>
+  
+      <p style="color:white; text-align: justify;"> Throughout my career, I have dedicated myself to pursuing excellence, fostering innovation, and crafting user-centered designs.  <br> <br>My work consistently enhances user engagement and drives business success. This commitment has established me as a valuable asset to organizations that are eager to leverage data and technology for a strategic advantage. <br><br> Over the years, my career has been marked by a dynamic and continuously evolving skill set, positioning me to effectively meet the challenges of the digital age. I bring impact to industries through my expertise in technology and data insights, always aiming to deliver solutions that not only solve problems but also innovate and inspire. </p>
+      
+      <br>
 
+      </div>
 
+      </div>
 
+      <div class="col-md-6 mb-3">
 
+        <h4 style="color:orange;"> Using Data Analysis to build an effective pricing strategy </h4>
+        <p style="color:white; font-size:14px;"> This project leverages advanced data analytics to develop effective pricing strategies aimed at enhancing revenue generation and market penetration in the retail sector. </p>
+     
 
 
-<br>
 
-<hr>
+      <a class="btn btn-lg" target="_blank" href="https://github.com/mojutoju/Using-Data-Analysis-to-build-an-effective-pricing-strategy" style="color: #182B27; background-color:#BEE988; border-radius:20px; "  > Learn More </a>
+    
+    
+      <hr style="color:white; background-color:white;">
 
-<br><br>
+      <h4 style="color:orange;"> Insightful Journeys Analyzing Travel Trends and Flight Dynamics
+      </h4>
+      <p style="color:white; font-size:14px;"> This project performs an extensive analysis of travel details and flight data. The aim is to uncover insights from these datasets and visualize the findings through various plots. </p>
 
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
 
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">  YOLKCOUNT </h1>
-        </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-mobile"></i> EGG TIMER MOBILE APPLICATION  </h4>
-    </div>
+    <a class="btn btn-lg" target="_blank" href="https://github.com/mojutoju/Insightful-Journeys-Analyzing-Travel-Trends-and-Flight-Dynamics" style="color: #182B27; background-color:#BEE988; border-radius:20px; "  > Learn More </a>
+  
+  
+    <hr style="color:white; background-color:white;">
 
+    
+    <h4 style="color:orange;"> Churn Prediction for Subscription Services: Improving Customer Retention
+    </h4>
 
-    <div class="col-md-6 mb-3">
-        <h5> YolkCount is an egg timer mobile application that helps track your eggs cooking time based on a case study
+    <p style="color:white; font-size:14px;">  This project focuses on churn prediction in a fictional business context. Churn, in this context, refers to the scenario where customers discontinue their subscription or service.  </p>
 
 
-        </h5>
-<br>
-        <a href="https://www.figma.com/file/DiJZzhPsASugTqoROvQTfp/Yolk-Count?t=VC2M790tsZ2efUOo-6" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
-
-
-    </div>
-</div>
-
-
-
-
-<center>
-
-    <img src="img/uidesign/22.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-
-
-
-<br>
-
-<hr>
-
-<br><br>
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">  SWIFTSEND </h1>
-        </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-laptop"></i> LOGISTICS DELIVERY WEB APPLICATION </h4>
-    </div>
-
-
-    <div class="col-md-6 mb-3">
-        <h5> SwiftSend is a global package delivery company with local currency convenience, they offer clients a focus on transactional convenience, that allows you to pay for your shipments in your own country's currency, eliminating the complexities of currency conversion.
-
-
-        </h5>
-<br>
-        <a href="https://www.figma.com/community/file/1247369405667214349" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
-
-
-    </div>
-</div>
-
-
-
-
-<center>
-
-    <img src="img/uidesign/swiftsend.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-
-<br>
-<hr>
-<br><br>
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">  BETAWAKA </h1>
-        </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-mobile"></i> TRAVEL ALARM MOBILE APPLICATION </h4>
-    </div>
-
-
-    <div class="col-md-6 mb-3">
-        <h5> Betawaka is a travel alarm mobile application that alerts users when they get to their nearest destination of travel.
-
-
-        </h5>
-<br>
-        <a href="https://www.figma.com/file/pVQQBfIBVkiFtqcKfDoDQ5/BetaWaka?node-id=0%3A1" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
-
-
-    </div>
-</div>
-
-
-
-
-<center>
-
-    <img src="img/uidesign/1.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-
-
-<br>
-<hr>
-<br><br>
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">  Demon Slayer </h1>
-        </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-laptop"></i> ANIME WEBSITE </h4>
-    </div>
-
-
-    <div class="col-md-6 mb-3">
-        <h5> An anime web ui for the popular anime series DEMON SLAYER, the website allows users to watch and also view detailed information about all characters in the series.
-
-
-        </h5>
-<br>
-        <a href="https://www.figma.com/community/file/1260047539346273329" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
-
-
-    </div>
-</div>
-
-
-
-
-<center>
-
-    <img src="img/uidesign/demonslayer.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
-
-
-<br>
-<hr>
-<br><br>
-
-<div class="row" data-aos="fade-up">
-    <div class="col mb-4">
-
-        <div class="responsive-heading">
-            <h1 style="color:black; font-weight: 800; letter-spacing: -2px;">  GAMESQUARED </h1>
-        </div>
-       
-        <h4 style="color:black;"> <i class="fa fa-laptop"></i> CLOUD GAMING WEB AND MOBILE PLATFORM </h4>
-    </div>
-
-
-    <div class="col-md-6 mb-3">
-        <h5> A cloud based multi-platform game application that gives users access to download their games via any console of their choice.
-
-
-        </h5>
-<br>
-        <a href="https://www.behance.net/gallery/120947213/GameSquared" target="_blank" style="color:black; font-size: 25px; font-weight: bold;">   View Project <i class="fa fa-arrow-right" style="color:red;"></i> </a>
-
-
-
-    </div>
-</div>
-
-
-
-
-<center>
-
-    <img src="img/uidesign/17.jpg" data-aos="fade-up" class="img-fluid"   width="1100px" style="border:3px solid black; border-radius: 35px;">
-</center>
+  <a class="btn btn-lg" href="https://github.com/mojutoju/churnprediction" target="_blank" style="color: #182B27; background-color:#BEE988; border-radius:20px; "  > Learn More </a>
 
 
 
@@ -792,35 +517,41 @@ Outside the space of work, I enjoy playing video games, watching movies and lear
 
 
     
+    <hr style="color:white; background-color:white;">
+
+</div>
+
+
 <div style="margin-bottom: 80px;"></div>
 
 
-<div class="bgg" style="background-color: aliceblue; padding:35px;">
-<div class="container aos-init aos-animate" data-aos="fade-up" >
+
+<div class="container aos-init aos-animate" data-aos="fade-up">
 
 
   <div class="row">
 
     <div class="col-md-6 mb-3">
 
-      <p style="border-radius: 25px;  color:#D40F7D; font-weight: 800; font-size:16px; letter-spacing: -2px;"> FIGMA COMMUNITY CONTRIBUTION </button>
+      <p style="border-radius: 25px;  color:white; font-weight: 800; font-size:30px; "> FACTS ABOUT MYSELF </button>
   
-      <h4 style="font-weight:800; color: black; font-size: 40px; letter-spacing: -3px; "> I've got my own <strong style="color:red;">Figma Community Profile</strong> </h4>
+      <h4 style="font-weight:800; color: orange; font-size: 20px;  "> I've got my own <strong style="color:red;">Youtube Channel</strong> </h4>
 
-      <p> With my skills in UI/UX design, I publish my ui/ux design projects to the figma community in order to impact the design community and inspire others 
+      <p style="color:white; font-size: 13px;"> My youtube channel TMCreatives was created to guide and educate young aspiring designers through the creative universe like Graphics, UI/UX, Web, and Motion Designs using design software. 
 
-     My Figma Community has impacted a total of <strong> over 669 Designers with Duplicates of my work, </strong> so I'm confident in my skills and willing to do more and learn as much as I can.
+      With my extensive experience as a Senior Designer and the ability to impact others and businesses through my skills, I'm confident that I'm the right candidate for any design role that aligns with my field of interest.
       </p>
 
-      
-<a href="https://figma.com/@mojutoju"  target="_blank" class="btn btn btn-sm" style="background-color:#D40F7D; color:white; width:170px; border-radius:30px; text-transform: none; padding:15px; font-size:17px;"> View Community</a>
+      <a class="btn btn-lg" href="https://www.youtube.com/channel/UCyzNj0e6YVtZkrMKlpERTww" target="_blank" style="color: #182B27; background-color:#BEE988; border-radius:20px; "  > View Channel </a>
 
+
+     
     </div>
 
 
     <div class="col-md-6 mb-3">
 
-      <a href="https://figma.com/@mojutoju" target="_blank">    <img src="img/figmacommunity.png" class="img-fluid"> </a>
+      <a href="https://www.youtube.com/channel/UCyzNj0e6YVtZkrMKlpERTww" target="_blank">    <img src="https://mojutoju.github.io/img/pic3.png" class="img-fluid"> </a>
 
     </div>
 
@@ -831,6 +562,7 @@ Outside the space of work, I enjoy playing video games, watching movies and lear
 
 
 </div>
+<hr style="color:white; background-color:white;">
 </div>
 
 
@@ -839,97 +571,107 @@ Outside the space of work, I enjoy playing video games, watching movies and lear
 
 
 
-<!-- Footer -->
-<footer class="bg text-center text-white" style="background: #D40F7D;">
-    <!-- Grid container -->
-    <div class="container p-4">
 
-      
-<div class="container aos-init aos-animate" data-aos="fade-up">
-<img src="img/contactbanner.png" class="img-fluid">
+
 </div>
-
-<div style="margin-bottom: 30px;"></div>
-      <p style="color: white; text-align:center;"> Connect with me via social media links </p>
-      <!-- Section: Social media -->
-      <section class="mb-4" id="contact">
-        <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://web.facebook.com/tojumoju" role="button"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-
-        <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.twitter.com/itss_toju" role="button"
-          ><i class="fab fa-twitter"></i
-        ></a>
-
-
-
-        <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/mojutoju" role="button"
-          ><i class="fab fa-instagram"></i
-        ></a>
-
-        <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.linkedin.com/in/mojutoju" role="button"
-          ><i class="fab fa-linkedin-in"></i
-        ></a>
-
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.github.com/mojutoju" role="button"
-          ><i class="fab fa-github"></i
-        ></a>
-
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.behance.net/mojutojusamson" role="button"
-          ><i class="fab fa-behance"></i
-        ></a>
-
-        <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://wa.me/+44769382796" role="button"
-          ><i class="fab fa-whatsapp"></i
-        ></a>
-
-
-                  <!-- Github -->
-                  <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="mailto:benmoju@gmail.com" role="button"
-                    ><i class="fab fa-google"></i
-                  ></a>
-
-                  
-                  <!-- Github -->
-                  <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://youtube.com/@tmcreatives" role="button"
-                    ><i class="fab fa-youtube"></i
-                  ></a>
-
-      </section>
-      <!-- Section: Social media -->
-
-
-
-
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 Copyright:
-      <a class="text-white" href="index.html">Toritseju Portfolio. | Website Designed By Toritseju </a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
-      
-
-    <script>
-        AOS.init();
-    </script>
     
+<div style="margin-top:50px"></div>
 
-        <!-- MDB -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js">
-</script>
-</body>
-</html>
+<div class="container">
+<center> <img src="img/profile.png" class="img-fluid" width="130px"> </center>
+<br>
+
+    <h1 style="color:white; text-align:center;"> LET'S WORK TOGETHER </h1>
+
+    <center>  <a class="btn btn-lg" href="mailto:toritsejumoju@gmail.com" target="_blank" style=" padding: 30px; color: #839e98; border:3px solid #7aa79d; border-radius:80px; text-transform: none; width: auto;"   > toritsejumoju@gmail.com </a>
+</center>
+
+
+<footer class="bg text-center text-white" >
+<div style="margin-bottom: 30px;"></div>
+        <p style="color: white; text-align:center;"> Connect with me via social media links </p>
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://web.facebook.com/tojumoju" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.twitter.com/itss_toju" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/thatdigital_guy" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.linkedin.com/in/mojutoju" role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.github.com/mojutoju" role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+
+          <!-- Github -->
+          <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.behance.net/mojutojusamson" role="button"
+            ><i class="fab fa-behance"></i
+          ></a>
+
+        
+
+
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="mailto:benmoju@gmail.com" role="button"
+                      ><i class="fab fa-google"></i
+                    ></a>
+
+                    
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://youtube.com/@tmcreatives" role="button"
+                      ><i class="fab fa-youtube"></i
+                    ></a>
+
+        </section>
+        <!-- Section: Social media -->
+
+
+
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Copyright:
+        <a class="text-white" href="index.html">Toritseju Portfolio. | Website Designed By Toritseju </a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+      AOS.init();
+  </script>
+  
+  <!-- MDB -->
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
+  ></script>
+  </body>
+  </html>
