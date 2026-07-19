@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toritseju Samson Moju - Product Engineer</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="img/logo2.png" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- MDBootstrap (KEEP ONLY ONE VERSION) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet" />
+
+<link href="https://fonts.cdnfonts.com/css/inter-tight" rel="stylesheet">
+                
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <style>
+
+
+.navbar-nav > li{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .navbar-nav > li{
+    margin-left:10px;
+    margin-right:10px;
+  }
+
+@import url('https://fonts.cdnfonts.com/css/inter-tight');
+
+    body{
+font-family: 'Inter Tight', sans-serif;
+            color:black;    
+background-color: burlywood;                      
+    }
+
+  .navbar {
+    box-shadow: none;
+    background: transparent;
+    border-bottom: none;
+    font-size: 14px;
+  }
+
+  /* Make nav-link hover also white (optional subtle fade) */
+.navbar .nav-link:hover {
+  background-color: rgb(233, 180, 112); 
+  color:white;
+
+  border-radius: 13px;
+}
+
+
+
+  /* Make all navbar text white */
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #724100 !important;
+}
+
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  /* FORCE hamburger icon visibility */
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+
+.arrow-down {
+  width: 24px;
+  height: 24px;
+  border-left: 3px solid #724100;
+  border-bottom: 3px solid #724100;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+}
+
+.fade {
+  animation: fadeDown 1.8s infinite;
+}
+
+@keyframes fadeDown {
+  0%   { opacity: 0; transform: translateY(-5px) rotate(-45deg); }
+  50%  { opacity: 1; transform: translateY(5px) rotate(-45deg); }
+  100% { opacity: 0; transform: translateY(15px) rotate(-45deg); }
+}
+
+.about-card {
+
+  padding: 35px;
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+}
+
+.about-title {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 800;
+  color: #F2D2A9; /* soft cream that matches burlywood */
+}
+img {
+  border-radius: 12px;
+}
+
+.skills-wrapper {
+  background: rgba(120, 72, 20, 0.85);
+
+  padding: 70px 0;
+  backdrop-filter: blur(6px);
+}
+
+.skills-heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  font-style: italic;
+  color: #F2D2A9;
+}
+
+.skills-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #F8E8D2;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 22px 28px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.skill-card h5 {
+  color: #F2D2A9;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.skill-card p {
+  color: #F8E8D2;
+  font-size: 16px;
+  margin: 0;
+}
+
+.projects-wrapper {
+  background: rgba(120, 72, 20, 0.85);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+  padding: 70px 0;
+}
+
+.projects-heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  font-style: italic;
+  color: #F2D2A9;
+}
+
+.projects-subtitle {
+  text-align: center;
+  color: #F8E8D2;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.25s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.project-img {
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.project-title {
+  color: #F2D2A9;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-text {
+  color: #F8E8D2;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8A5A2E;
+  color: #F8E8D2;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: 0.25s ease;
+}
+
+.project-btn:hover {
+  background-color: #A06B3A;
+  transform: translateY(-3px);
+}
+
+.community-highlight {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  backdrop-filter: blur(6px);
+}
+
+.community-highlight-title {
+  font-size: 40px;
+  font-weight: 800;
+  font-style: italic;
+  color: #724100;
+}
+
+.community-highlight-intro,
+.community-highlight-outro {
+  color: #3b2a14;
+  opacity: 0.9;
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.community-feature {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.community-feature-img {
+  border-radius: 14px;
+  max-width: 85%;
+}
+
+.community-feature-title {
+  color: #724100;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.community-feature-text {
+  color: #3b2a14;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* Elegant Link Button */
+.community-link-btn {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #724100;
+  text-decoration: none;
+  border-bottom: 2px solid #724100;
+  padding-bottom: 3px;
+  transition: 0.25s ease;
+}
+
+.community-link-btn:hover {
+  color: #A06B3A;
+  border-bottom-color: #A06B3A;
+  transform: translateX(4px);
+}
+
+.final-contact-section {
+  background: rgba(120, 72, 20, 0.85);
+ 
+  backdrop-filter: blur(6px);
+ 
+}
+
+.final-profile-img {
+  border-radius: 50%;
+}
+
+.final-heading {
+  color: #F2D2A9;
+  font-weight: 800;
+  font-size: 42px;
+  font-style: italic;
+}
+
+.final-email-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 18px 40px;
+  border: 3px solid #7aa79d;
+  border-radius: 80px;
+  color: #d9f2ec;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.final-email-btn:hover {
+  background: #7aa79d;
+  color: #1e1e1e;
+}
+
+.final-social-text {
+  color: #F8E8D2;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.final-social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 22px;
+  color: #F8E8D2;
+  transition: 0.3s ease;
+}
+
+.final-social-icons a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.final-footer {
+  margin-top: 25px;
+  padding: 12px 0;
+  color: #F8E8D2;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+</style>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container">
+
+      <!-- Brand (left) -->
+      <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="index.html">
+        <span>TMS</span>
+      </a>
+
+     
+      <!-- Mobile toggle -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+          
+      >
+              <i class="fa fa-bars" style="color: #724100;"></i>
+      </button>
+
+      <!-- Nav content -->
+      <div class="collapse navbar-collapse" id="mainNav">
+
+        <!-- Centered nav links -->
+        <ul class="navbar-nav mx-auto gap-4 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#case-studies">Case Studies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#community">Community</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+<!-- Right-aligned CTA -->
+<div class="d-flex justify-content-lg-end mt-3 mt-lg-0 w-30 w-lg-auto">
+  <a
+    class="btn btn btn-sm px-3 w-100 w-lg-auto text-center text-white"
+    href="assets/Toritseju_Samson_Moju_Product_Engineer_CV.pdf"
+    target="_blank"
+    rel="noopener" style="background-color: rgb(133, 75, 1); color:#724100;"
+  >
+    Download CV
+  </a>
+</div>
+
+      </div>
+    </div>
+  </nav>
+
+  <div style="margin-bottom: 150px;"></div>
+
+
+  <div class="herosection">
+    <div class="container">
+
+    <h1 style="text-align:center; color: #724100; font-size:65px; font-weight: bold;"> <span style="font-style: italic; color:black;"> Hello , </span > I am Toritseju Samson Moju </h1>
+
+    <h4 style="text-align:center; color: #0e0d0d; font-size:35px; font-style: italic;"> Product Engineer (Design-First Full Stack) </h4>
+
+    <h5 style="text-align:center; color: #0e0d0d; font-size:35px; font-style: italic;"> Bridging UX and Production Code </h5>
+
+
+  <div style="margin-bottom: 50px;"></div>
+    <p  style="text-align:center; color: #0e0d0d; font-size:17px; font-style: italic;"> I work across product engineering roles, including Product Engineer, Design Engineer, and Software Engineer on product-focused teams. </p>
+  </div>
+
+
+  <div style="margin-bottom: 95px;"></div>
+  <center> <div class="arrow-down fade"></div></center>
+
+  
+
+
+</div>
+
+
+  <div style="margin-bottom: 125px;"></div>
+
+  <div class="about-card" id="about">
+<div class="container py-5">
+  <div class="row justify-content-center align-items-center">
+
+    <!-- Text Column -->
+    <div class="col-lg-5 col-md-6 mb-4">
+      <h4 class="about-title" style="font-size:40px; font-style: italic; font-family: bold; color:#502d00;">About Me</h4>
+
+      <p class="about-text">
+        I’m a Product Engineer with a design-first mindset and over a decade of experience building production-ready digital systems. My background in visual design and UX gives me a unique advantage: I don’t just write code — I shape how products feel, function, and scale.
+      </p>
+
+      <p class="about-text">
+        I’ve worked across SaaS, EdTech, AI, FinTech, and enterprise systems, often building admin dashboards, internal tools, CMS platforms, and data workflows. I enjoy translating complex requirements into clear, scalable solutions.
+      </p>
+
+      <p class="about-text">
+        What sets me apart is my ability to think like a designer and execute like an engineer. I care about clarity, usability, and maintainability — especially in systems used by non-technical teams.
+      </p>
+
+      <p class="about-text">
+        I’m currently open to Product Engineer, Design Engineer, and product-focused Full-Stack roles, including global and visa-sponsored opportunities.
+      </p>
+    </div>
+
+    <!-- Image Column -->
+    <div class="col-lg-4 col-md-5 mb-4 text-center">
+      <img src="img/hero2.png" class="img-fluid about-img">
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div style="margin-bottom: 90px;"></div>
+
+<div class="skills-wrapper py-5">
+  <div class="container">
+
+    <h3 class="skills-heading">Skills & Capabilities</h3>
+    <p class="skills-subtitle">A blend of engineering depth and design-first thinking</p>
+
+    <div class="row justify-content-center mt-5">
+
+      <div class="col-lg-5 col-md-6 mb-4">
+        <div class="skill-card">
+            <img src="img/frontend.png" class="img-fluid" >
+          <h5>Frontend</h5>
+          <p>React, HTML, CSS, JavaScript</p>
+        </div>
+
+   <div class="skill-card">
+          <h5>Product</h5>
+          <p>UX, Design Systems, Admin Dashboards</p>
+        </div>
+
+      </div>
+
+      <div class="col-lg-5 col-md-6 mb-4">
+     
+
+        <div class="skill-card">
+                  <img src="img/backend.png" class="img-fluid" >
+          <h5>Backend</h5>
+          <p>PHP, MySQL, REST APIs, Laravel, Node.js</p>
+        </div>
+
+        <div class="skill-card">
+          <h5>Platforms</h5>
+          <p>SaaS, EdTech, AI, FinTech, B2B</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div style="margin-bottom: 90px;"></div>
+
+<div class="case-wrapper py-5" id="case-studies">
+  <div class="container">
+
+    <h3 style="letter-spacing:6px;">CASE STUDIES</h3>
+    <!-- Title -->
+    <h2 class="case-heading">Edutee Global — End-to-End EdTech Platform</h2>
+    <p class="case-subtitle">Product Engineer / Technical Lead -   <a href="https://edutee.org" target="_blank" class="cta-button" style="color:#502d00;">
+    View Project
+  </a></p>
+
+
+    <!-- Hero Screenshot -->
+    <div class="case-hero mt-5">
+      <img src="img/eduteelandingpage.png" class="img-fluid case-img">
+    </div>
+
+    <!-- Overview -->
+    <div class="case-section mt-5">
+      <h4>Overview</h4>
+      <p>
+        Edutee Global required a scalable digital platform to manage educational content, users, and internal operations.
+        Existing workflows were manual, fragmented, and difficult for non-technical staff to manage independently.
+        The goal was to design and build a production-ready platform that could support content delivery, user management,
+        and internal administration — while remaining flexible for future growth.
+      </p>
+    </div>
+
+    <!-- My Role -->
+    <div class="case-section mt-4">
+      <h4>My Role</h4>
+      <p>
+        I owned the product end-to-end, covering UX and product design, frontend engineering, backend development,
+        data modelling, admin systems, RBAC, deployment, and ongoing improvements. This role required bridging product
+        intent and production code to deliver a usable, maintainable system.
+      </p>
+    </div>
+
+    <!-- Solution -->
+    <div class="case-section mt-4">
+      <h4>Solution & System Thinking</h4>
+      <p>
+        The solution focused on clarity, control, and scalability: a custom CMS, admin dashboards, RBAC, clear workflows,
+        and responsive UI. Design decisions were validated early using Figma, then translated into production-ready components.
+      </p>
+    </div>
+
+    <!-- Key Screens -->
+    <h3 class="case-subheading mt-5">Key Screens & Features</h3>
+
+    <!-- 1. Landing Page -->
+    <div class="row align-items-center case-row">
+      <div class="col-md-6 mb-3">
+        <h5>Landing Page</h5>
+        <p>Establishes the platform’s purpose and credibility while serving as the main user entry point.</p>
+
+        
+        <img src="img/mockup1.jpg" class="img-fluid case-img">
+      
+      </div>
+     
+  
+
+    <!-- 2. Admin Dashboard -->
+
+      <div class="col-lg-6">
+        <h5>Admin Dashboard Overview</h5>
+        <p>Provides administrators with visibility into platform activity and system health.</p>
+
+             <img src="img/eduteedashboard.png" class="img-fluid case-img">
+      
+      </div>
+     
+   
+
+    <!-- 3. CMS -->
+      <div class="col-lg-6">
+        
+       
+      
+        <h5>Content Management System (CMS)</h5>
+        <p>Allows non-technical staff to manage content independently, reducing operational dependency.</p>
+   <img src="img/eduteecms.png" class="img-fluid case-img">
+
+      </div>
+      
+      
+
+
+    <!-- 4. User & Role Management -->
+   
+      <div class="col-lg-6">
+        <h5>User & Role Management</h5>
+        <p>Implements RBAC to ensure correct access levels and secure system usage.</p>
+
+         <img src="img/eduteeusers.png" class="img-fluid case-img">
+      </div>
+      
+
+
+    <!-- 5. Core Workflow -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6">
+        <h5>Core Workflow Screen</h5>
+        <p>Shows real business logic in action — not just UI.</p>
+        <img src="img/eduteeworkflow.png" class="img-fluid case-img">
+      </div>
+   
+        
+    
+    
+
+    <!-- 6. Responsive -->
+   <div class="col-lg-6">
+      <h5>Responsive View</h5>
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+    <img src="img/eduteeresponsive.png" class="img-fluid case-img" >
+        </div>
+
+         <div class="col-md-4 mb-3">
+    <img src="img/eduteeresponsive2.png" class="img-fluid case-img" >
+        </div>
+
+         <div class="col-md-4 mb-3">
+    <img src="img/eduteeresponsive3.png" class="img-fluid case-img" >
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- 7. Architecture -->
+    <div class="case-full mt-5">
+      <h5>System Flow / Architecture</h5>
+      <img src="img/eduteesystems.png" class="img-fluid case-img">
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-4 mb-3">
+ <!-- Tech Stack -->
+    <div class="case-section mt-5">
+      <h4>Tech Stack</h4>
+      <p>
+        <strong>Frontend:</strong> React, HTML, CSS, JavaScript<br>
+        <strong>Backend:</strong> PHP, MySQL<br>
+        <strong>Features:</strong> CMS, Admin Dashboards, RBAC<br>
+        <strong>Design:</strong> Figma (UX flows, dashboard structure)
+      </p>
+    </div>
+        </div>
+
+
+        <div class="col-md-4 mb-3">
+ 
+    <!-- Impact -->
+    <div class="case-section mt-5">
+      <h4>Impact & Outcomes</h4>
+      <ul>
+        <li>Reduced manual admin tasks by 40%</li>
+        <li>Improved workflow efficiency by 35%</li>
+        <li>Enabled non-technical staff to manage operations independently</li>
+        <li>Delivered a scalable foundation for future growth</li>
+      </ul>
+    </div>
+        </div>
+
+
+        <div class="col-md-4 mb-3">
+
+    <!-- Reflection -->
+    <div class="case-section mt-5">
+      <h4>Reflection</h4>
+      <p>
+        This project reinforced the importance of designing internal tools with the same care as public interfaces.
+        Building systems that non-technical users can confidently operate reduces friction, improves adoption,
+        and allows teams to scale without increasing operational overhead.
+      </p>
+    </div>
+        </div>
+    </div>
+   
+  
+</div>
+
+<div style="margin-bottom: 90px;"></div>
+
+<div class="case-wrapper py-5" id="b2b-ai-platform">
+  <div class="container">
+
+    <!-- Title -->
+    <h2 class="case-heading">B2B AI Platform — AI Agent Management SaaS</h2>
+    <p class="case-subtitle">Software Engineer (Product Teams) -   <a href="https://mojutoju.github.io/b2bai" target="_blank" style="color:#502d00;"  class="cta-button">
+        View Project
+      </a></p>
+
+    <!-- Hero Screenshot -->
+    <div class="case-hero mt-5">
+      <img src="img/mockup2.jpg" class="img-fluid case-img">
+    </div>
+
+    <!-- Overview -->
+    <div class="case-section mt-5">
+      <h4>Overview</h4>
+      <p>
+        The platform enables businesses to deploy, configure, and manage multiple AI-powered agents for operational automation.
+        These agents support real-time communication, task execution, and workflow automation across customer-facing and internal processes.
+        The challenge was to build a scalable, intuitive SaaS interface that allowed non-technical users to configure AI agents while maintaining system flexibility and reliability.
+      </p>
+    </div>
+
+    <!-- My Role -->
+    <div class="case-section mt-4">
+      <h4>My Role</h4>
+      <p>
+        I worked as a Software Engineer on the product team, contributing across the full product lifecycle:
+        product-focused frontend development, UX-to-code execution, AI service integrations, translating business requirements,
+        and improving system usability and reliability. This required close collaboration with product stakeholders and engineers.
+      </p>
+    </div>
+
+    <!-- Solution -->
+    <div class="case-section mt-4">
+      <h4>Solution & Product Thinking</h4>
+      <p>
+        The solution focused on clarity, configurability, and control: a central dashboard, structured agent setup flows,
+        visibility into agent behaviour, modular interfaces, and UX patterns that surface AI behaviour transparently.
+        Designs were aligned closely with backend logic to ensure predictable system behaviour.
+      </p>
+    </div>
+
+    <!-- Key Screens -->
+    <h3 class="case-subheading mt-5">Key Screens & Features</h3>
+
+    <!-- 1. Landing Page -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6">
+        <h5>1️⃣ Platform Landing Page</h5>
+        <p>Establishes product positioning, explains the value of AI agents, and provides context for new users.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://toritsejumoju.github.io/webmockups/b2bai.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 2. Main Dashboard -->
+    <div class="row align-items-center case-row flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <h5>2️⃣ Main User Dashboard</h5>
+        <p>Acts as the operational control centre for users managing multiple AI agents.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockup3.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 3. Agent Setup -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6">
+        <h5>3️⃣ AI Agent Setup (Most Important)</h5>
+        <p>Shows how complex AI logic is abstracted into a usable setup flow for non-technical users.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockup4.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 4. Agent Configuration -->
+    <div class="row align-items-center case-row flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <h5>4️⃣ Agent Configuration & Logic</h5>
+        <p>Highlights how users define agent behaviour, rules, and automation logic.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockup5.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 5. Workflow -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6">
+        <h5>5️⃣ Workflow / Automation View</h5>
+        <p>Makes AI behaviour transparent and debuggable, building trust in automated systems.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockup6.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 6. Integrations -->
+    <div class="row align-items-center case-row flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <h5>6️⃣ Integrations & Communication Channels</h5>
+        <p>Shows real-world system integration and multi-service orchestration.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockup7.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4 mb-3">
+ <!-- Tech Stack -->
+    <div class="case-section mt-4">
+      <h4>Tech Stack</h4>
+      <p>
+        <strong>Frontend:</strong> HTML, CSS, JavaScript, React.js<br>
+        <strong>Backend & Services:</strong> AI APIs (GPT-based), third-party integrations, Python<br>
+        <strong>Platform Features:</strong> SaaS dashboards, agent workflows, automation logic<br>
+        <strong>Design:</strong> UX flows aligned with backend capabilities
+      </p>
+    </div>
+        </div>
+
+
+
+ <div class="col-md-4 mb-3">
+
+
+    <!-- Impact -->
+    <div class="case-section mt-4">
+      <h4>Impact & Outcomes</h4>
+      <ul>
+        <li>Improved operational efficiency by up to 30%</li>
+        <li>Reduced delivery friction and rework by 20%</li>
+        <li>Enabled scalable deployment of multiple AI agents</li>
+        <li>Improved system usability and reliability</li>
+      </ul>
+    </div>
+
+</div>
+
+
+<div class="col-md-4 mb-3">
+
+
+    <!-- Reflection -->
+    <div class="case-section mt-4">
+      <h4>Reflection</h4>
+      <p>
+        This project strengthened my ability to design and build AI-enabled products that balance power with usability.
+        It reinforced the importance of making AI behaviour visible and controllable — a principle I continue to apply in product-focused engineering.
+      </p>
+    </div>
+
+
+</div>
+
+
+    </div>
+   
+
+  </div>
+</div>
+
+
+<div class="case-wrapper py-5" id="noron-marque">
+  <div class="container">
+
+    <!-- Title -->
+    <h2 class="case-heading">Noron Marque — HR Management System</h2>
+    <p class="case-subtitle">Enterprise HR & Career Management Platform • Product Engineer -  <a href="https://github.com/mojutoju/noronmarque" target="_blank" style="color:#502d00;"  class="cta-button">
+        View Project
+      </a> </p>
+
+    <!-- Hero Screenshot -->
+    <div class="case-hero mt-5">
+      <img src="img/mockup8.jpg" class="img-fluid case-img">
+    </div>
+
+    <!-- Overview -->
+    <div class="case-section mt-5">
+      <h4>Overview</h4>
+      <p>
+        The organisation required a centralised HR and career management system to manage employee records, career progression,
+        and internal workflows. Existing processes were manual, fragmented, and difficult to scale as the workforce grew.
+        The goal was to design and build an enterprise-grade platform that provided visibility, control, and efficiency for HR
+        administrators while remaining clear and usable for employees.
+      </p>
+    </div>
+
+    <!-- My Role -->
+    <div class="case-section mt-4">
+      <h4>My Role</h4>
+      <p>
+        I worked as a Product Engineer, responsible for backend logic, database modelling, frontend UI for admin and employee dashboards,
+        admin tooling, UX decisions for data-heavy interfaces, and system optimisation. This role required balancing complex business rules
+        with a usable interface for daily operations.
+      </p>
+    </div>
+
+    <!-- Solution -->
+    <div class="case-section mt-4">
+      <h4>Solution & System Design</h4>
+      <p>
+        The system was designed around clarity, structure, and scalability: role-based access, centralised employee records,
+        admin dashboards, modular features, and consistent UI patterns for navigating complex datasets. Designs were informed by
+        real HR workflows and aligned closely with backend data models.
+      </p>
+    </div>
+
+    <!-- Key Screens -->
+    <h3 class="case-subheading mt-5">Key Screens & Features</h3>
+
+    <!-- 1. Landing Page -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6">
+        <h5>1️⃣ Public Landing Page</h5>
+        <p>Provides context for the platform and establishes it as a formal enterprise system.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://toritsejumoju.github.io/webmockups/nm2.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 2. Admin Dashboard -->
+    <div class="row align-items-center case-row flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <h5>2️⃣ Admin Dashboard Overview</h5>
+        <p>Acts as the operational control centre for HR teams managing large datasets.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockupnm.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 3. Employee Records -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6">
+        <h5>3️⃣ Employee Records Management</h5>
+        <p>Shows structured data handling and CRUD workflows at scale.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockupnm2.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 4. Career Management -->
+    <div class="row align-items-center case-row flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <h5>4️⃣ Career & Role Management</h5>
+        <p>Demonstrates domain understanding beyond basic HR features.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockupnm5.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- 5. Employee Dashboard -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6">
+        <h5>5️⃣ Employee Dashboard</h5>
+        <p>Shows multi-role UX thinking — different users, different needs.</p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockupnm3.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+  
+<div class="row">
+
+    <div class="col-md-4 mb-3">
+  <!-- Tech Stack -->
+    <div class="case-section mt-4">
+      <h4>Tech Stack</h4>
+      <p>
+        <strong>Frontend:</strong> HTML, CSS, JavaScript, React.js <br>
+        <strong>Backend:</strong> PHP Laravel, MySQL<br>
+        <strong>System Features:</strong> Admin dashboards, RBAC, data management workflows<br>
+        <strong>Design:</strong> UX patterns optimised for data-heavy enterprise systems
+      </p>
+    </div>
+    </div>
+
+
+       <div class="col-md-4 mb-3">
+ <!-- Impact -->
+    <div class="case-section mt-4">
+      <h4>Impact & Outcomes</h4>
+      <ul>
+        <li>Supported structured management of 500+ employee records</li>
+        <li>Reduced manual HR data entry by 15% through automation</li>
+        <li>Improved operational visibility for HR administrators</li>
+        <li>Delivered 95%+ of project milestones on schedule</li>
+      </ul>
+    </div>
+    </div>
+
+
+    
+
+       <div class="col-md-4 mb-3">
+ 
+    <!-- Collaboration -->
+    <div class="case-section mt-4">
+      <h4>Collaboration & Delivery</h4>
+      <p>
+        Worked with stakeholders to define HR workflows and requirements, collaborated with developers to align UI decisions
+        with backend constraints, and delivered features iteratively to meet enterprise expectations for reliability and accuracy.
+      </p>
+    </div>
+
+    </div>
+
+
+</div>
+  
+
+    
+
+    <!-- Reflection -->
+    <div class="case-section mt-4">
+      <h4>Reflection</h4>
+      <p>
+        This project reinforced the importance of clarity and consistency when designing enterprise systems.
+        Small UX improvements — such as clear data grouping and predictable navigation — had a significant impact
+        on usability in a data-heavy environment.
+      </p>
+    </div>
+
+ 
+
+  </div>
+</div>
+
+<div class="case-wrapper py-5" id="securewave">
+  <div class="container">
+
+    <!-- Title -->
+    <h2 class="case-heading">SecureWave NG — FinTech Platform</h2>
+    <p class="case-subtitle">Secure Payments & Developer Dashboard • Product Designer / UI Engineer</p>
+<p style="font-style: italic; font-weight: bold;"> UI/UX & systems design in a regulated FinTech environment </p>
+    <!-- Hero Screenshot -->
+    <div class="case-hero mt-5">
+      <img src="img/mockupsw.jpg" class="img-fluid case-img">
+    </div>
+
+    <!-- Overview -->
+    <div class="case-section mt-5">
+      <h4>Overview</h4>
+      <p>
+        SecureWave NG is a FinTech platform designed to support payments, virtual accounts, cards, customer management,
+        and developer integrations. The challenge was to design a secure, multi-role dashboard that made complex financial
+        workflows clear, trustworthy, and usable — without compromising compliance or security.
+      </p>
+    </div>
+
+    <!-- My Role -->
+    <div class="case-section mt-4">
+      <h4>My Role</h4>
+      <p>
+        I focused on product UX and interface design, working closely with engineers to ensure designs were feasible,
+        aligned with backend data models, and clear for both business users and developers. This included designing dashboards,
+        workflows, and developer tools for a regulated environment.
+      </p>
+    </div>
+
+    <!-- What I Designed -->
+    <h3 class="case-subheading mt-5">What I Designed</h3>
+
+    <!-- Business Dashboard -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6 mb-3">
+        <h5>🔹 Business Dashboard</h5>
+        <p>
+          Account balances, transaction visibility, and operational summaries designed with clarity and trust in mind.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockupsw3.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- Customer & Account Management -->
+    <div class="row align-items-center case-row flex-lg-row-reverse">
+      <div class="col-lg-6 mb-3">
+        <h5>🔹 Customer & Account Management</h5>
+        <p>
+          Structured lifecycle views, virtual accounts, card management, and data-heavy tables optimised for speed and clarity.
+        </p>
+
+           <img src="img/mockupsw4.jpg" class="img-fluid case-img">
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockupsw2.jpg" class="img-fluid case-img"> <br>
+             
+      </div>
+    </div>
+
+    <!-- Developer Tools -->
+    <div class="row align-items-center case-row">
+      <div class="col-lg-6 mb-3">
+        <h5>🔹 Developer Tools (Key Differentiator)</h5>
+        <p>
+          API key management, webhook configuration, and a clear separation between business and developer concerns.
+          Designed to help developers self-serve integrations.
+        </p>
+
+        <br>
+
+        <img src="img/mockupsw6.jpg"  class="img-fluid case-img">
+      </div>
+      <div class="col-lg-6 mb-3">
+        <img src="img/mockupsw5.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+    <!-- Security & Authentication -->
+    <div class="row align-items-center case-row flex-lg-row-reverse">
+      <div class="col-lg-6 mb-3">
+        <h5>🔹 Security & Authentication</h5>
+        <p>
+          2FA flows, access management, and UX patterns designed to reinforce trust, control, and compliance.
+        </p>
+      </div>
+      <div class="col-lg-6">
+        <img src="img/mockupsw7.jpg" class="img-fluid case-img">
+      </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+ <!-- Design Thinking -->
+    <div class="case-section mt-4">
+      <h4>Design & System Thinking</h4>
+      <p>
+        The platform was designed around clarity, strong visual hierarchy, explicit system states, and UX patterns aligned
+        with backend logic to reduce implementation friction. Early concepts were explored in Figma and refined through
+        collaboration with engineering.
+      </p>
+    </div>
+        </div>
+
+
+<div class="col-md-4 mb-3">
+
+    <!-- Impact -->
+    <div class="case-section mt-4">
+      <h4>Impact</h4>
+      <ul>
+        <li>Improved clarity across complex financial workflows</li>
+        <li>Reduced user confusion around transactions and account states</li>
+        <li>Enabled developers to self-serve integrations through intuitive tooling</li>
+        <li>Established consistent UX patterns across business and developer dashboards</li>
+      </ul>
+    </div>
+
+</div>
+
+
+<div class="col-md-4 mb-3">
+
+
+    <!-- Why It Matters -->
+    <div class="case-section mt-4">
+      <h4>Why This Project Matters</h4>
+      <p>
+        This project strengthened my ability to design secure, data-heavy systems in regulated environments — experience
+        that directly informs how I now build production-ready platforms as a Product Engineer.
+      </p>
+    </div>
+
+</div>
+
+
+
+    </div>
+   
+
+  </div>
+</div>
+
+
+
+<div class="projects-wrapper py-5" id="projects">
+  <div class="container">
+
+    <h2 class="projects-heading">Additional Web Projects (Selected)</h2>
+    <p class="projects-subtitle">
+      A small selection of landing pages and web experiences delivered for different industries, 
+      showcasing visual clarity, responsive layouts, and clean frontend execution.
+    </p>
+
+    <div class="row mt-5">
+
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card">
+          <img src="img/swiftsend.jpg" class="img-fluid project-img">
+
+          <h5 class="project-title">SwiftSend — Logistics Company Website</h5>
+          <p class="project-text">
+            Marketing & service website for a logistics company.  
+            Designed and built a responsive landing page focused on service clarity, trust, and global delivery messaging.
+          </p>
+
+          <a href="https://mojutoju.github.io/swiftsend" target="_blank" class="project-btn">
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card">
+          <img src="img/demonslayer.jpg" class="img-fluid project-img">
+
+          <h5 class="project-title">Demon Slayer — Anime Entertainment Website</h5>
+          <p class="project-text">
+            Entertainment-focused fan experience.  
+            Designed a visually immersive landing experience for anime content with strong branding and interaction.
+          </p>
+
+          <a href="https://mojutoju.github.io/demonslayer" target="_blank" class="project-btn">
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="project-card">
+          <img src="img/transitionextreme.jpg" class="img-fluid project-img">
+
+          <h5 class="project-title">Transition Extreme — Youth Charity Organisation</h5>
+          <p class="project-text">
+            Non-profit website for a youth-focused charity.  
+            Designed and built a clean, accessible website balancing storytelling with clear calls to action.
+          </p>
+
+          <a href="https://mojutoju.github.io/transitionextreme" target="_blank" class="project-btn">
+            View Project
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-bottom: 30px;"></div>
+
+
+<div class="community-highlight py-5" id="community">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-7 col-md-9 text-center">
+        <h2 class="community-highlight-title">Community & Knowledge Sharing</h2>
+        <p class="community-highlight-intro">
+          I actively share knowledge and contribute to the design and development community — helping beginners understand
+          design-to-code workflows, practical UX thinking, and modern web development fundamentals.
+        </p>
+
+
+      </div>
+    </div>
+
+    <!-- Figma Row -->
+    <div class="row align-items-center community-feature mb-5">
+      <div class="col-md-5 text-center">
+        <img src="img/figma-community.png" class="img-fluid community-feature-img">
+      </div>
+      <div class="col-md-7">
+        <h4 class="community-feature-title">Figma Community</h4>
+        <p class="community-feature-text">
+          Creator of open product design resources with <strong>15,000+ duplicates</strong>, focused on real-world UI patterns,
+          design systems, and product thinking. These resources help designers and developers build with clarity and structure.
+        </p>
+
+          <a href="https://figma.com/@mojutoju" target="_blank" class="community-link-btn">
+          Visit Figma Profile →
+        </a>
+
+
+      </div>
+    </div>
+
+    <!-- YouTube Row -->
+    <div class="row align-items-center community-feature flex-md-row-reverse">
+      <div class="col-md-5 text-center">
+        <img src="img/youtube.png" class="img-fluid community-feature-img">
+      </div>
+      <div class="col-md-7">
+        <h4 class="community-feature-title">YouTube</h4>
+        <p class="community-feature-text">
+          I produce educational content teaching beginners how to design and build web interfaces — bridging UI/UX and frontend
+          development through clear, practical tutorials and real-world examples.
+        </p>
+
+        
+        <a href="https://www.youtube.com/@tmcreatives" target="_blank" class="community-link-btn">
+          Visit YouTube Channel →
+        </a>
+      </div>
+    </div>
+
+    <!-- Outro -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-lg-7 col-md-9 text-center">
+        <p class="community-highlight-outro">
+          Teaching sharpens my understanding of product development.  
+          I believe strong products are built by people who understand both users and implementation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+  <div style="margin-bottom: 150px;"></div>
+
+<div class="final-contact-section py-5" id="contact">
+  <div class="container text-center">
+
+    <!-- Profile Image -->
+    <img src="https://toritsejumoju.github.io/img/profile.png" class="img-fluid final-profile-img" width="130px">
+
+    <!-- Heading -->
+    <h1 class="final-heading mt-4">LET'S WORK TOGETHER</h1>
+
+    <!-- Email Button -->
+    <a class="final-email-btn" href="mailto:toritsejumoju@gmail.com" target="_blank">
+      toritsejumoju@gmail.com
+    </a>
+
+    <!-- Social Icons -->
+    <p class="final-social-text mt-4">Connect with me via social media</p>
+
+    <div class="final-social-icons">
+    
+      <a href="https://www.instagram.com/thatdigital_guy" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/mojutoju" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.github.com/mojutoju" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.behance.net/mojutojusamson" target="_blank"><i class="fab fa-behance"></i></a>
+      <a href="mailto:toritsejumoju@gmail.com" target="_blank"><i class="fab fa-google"></i></a>
+      <a href="https://youtube.com/@tmcreatives" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <div class="final-footer mt-4">
+      © <span id="year"></span> Toritseju Portfolio — Designed by Toritseju
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- REQUIRED: Bootstrap JS for collapse -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+  <!-- Optional: MDB JS (only if you use MDB components) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/js/all.min.js" />
+</body>
+</html>
